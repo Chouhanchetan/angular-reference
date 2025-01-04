@@ -1,0 +1,7 @@
+<div *ngIf="service; else notFound">
+    <h1>{{service.name}}</h1>
+    <p>{{service.desc}}</p>
+</div>
+<ng-template #notFound>
+    <p>Service not found. Please check the ID or try again later.</p>
+</ng-template>

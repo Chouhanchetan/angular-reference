@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="cards">
+        <li class="cards_item" *ngFor="let services of service" >
+    
+          <div class="card">
+            <div class="card_image"><img src="{{services.look}}"></div>
+            <div class="card_content">
+              <h2 class="card_title">{{ services.name }}</h2>
+              <p class="card_text"> {{ services.desc }}</p>
+              <button class="btn card_btn" [routerLink]="['/services', services.id]">Read More</button>
+            </div>
+          </div>
+        </li>
+    </ul>    
+</body>
+</html>
